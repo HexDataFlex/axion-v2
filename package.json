@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -17,5 +18,12 @@
     "url": "https://github.com/protopixel06/axion-v2/issues"
   },
   "homepage": "https://github.com/protopixel06/axion-v2#readme",
-  "dependencies": {}
+  "dependencies": {
+    "@discordjs/builders": "^1.2.0",
+    "@discordjs/rest": "^1.1.0",
+    "discord-api-types": "^0.37.10",
+    "discord.js": "^13.11.0",
+    "dotenv": "^16.0.2",
+    "nodemon": "^2.0.20"
+  }
 }
