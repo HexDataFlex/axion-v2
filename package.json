@@ -17,7 +17,5 @@
     "url": "https://github.com/protopixel06/axion-v2/issues"
   },
   "homepage": "https://github.com/protopixel06/axion-v2#readme",
-  "dependencies": {
-    "auto-git-update": "^2.1.2"
-  }
+  "dependencies": {}
 }
