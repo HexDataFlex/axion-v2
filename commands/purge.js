@@ -2,6 +2,7 @@ const { SlashCommandBuilder, messageLink } = require("@discordjs/builders");
 const { Interaction } = require("discord.js");
 const { PermissionFlagsBits } = require("discord-api-types/v9");
 const ResultEmbed = require("../helpers/commandResult");
+const Emoji = require("../emojis");
 
 module.exports = {
   name: "Purge",
@@ -27,13 +28,17 @@ module.exports = {
       await interaction.reply({ content: "Purging..." });
       await interaction.deleteReply();
       const message = [
-        `Channel: <#${interaction.channel.id}>`,
-        `Messages requested: \`${interaction.options.getInteger("amount")}\``,
-        `Messages deleted: \`${deletedMessages.size}\``,
+        `${Emoji.channel} Channel: <#${interaction.channel.id}>`,
+        `${
+          Emoji.magnifying_glass
+        } Messages requested: \`${interaction.options.getInteger("amount")}\``,
+        `${Emoji.trash_can} Messages deleted: \`${deletedMessages.size}\``,
       ];
       const logMessage = [
-        `Messages requested: \`${interaction.options.getInteger("amount")}\``,
-        `Messages deleted: \`${deletedMessages.size}\``,
+        `${
+          Emoji.magnifying_glass
+        } Messages requested: \`${interaction.options.getInteger("amount")}\``,
+        `${Emoji.trash_can} Messages deleted: \`${deletedMessages.size}\``,
       ];
       ResultEmbed.simple(
         interaction.client,
