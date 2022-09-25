@@ -14,7 +14,7 @@ module.exports = {
       if (err) console.log(err);
 
       await interaction.reply({
-        content: "An error occurred while running this command.",
+        content: "⚠️ **Error** 🢂 An error occurred while running this command.",
         ephemeral: true,
       });
     }
